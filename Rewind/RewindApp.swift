@@ -1,31 +1,30 @@
-//
-//  RewindApp.swift
-//  Rewind
-//
-//  Created by Tina Jiang on 8/16/26.
-//
-
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct RewindApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    @State private var photos = PhotoLibraryService()
 
+    var sharedModelContainer: ModelContainer = {
+        let schema = RewindSchema.models
+        let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try ModelContainer(for: schema, configurations: [configuration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            try? FileManager.default.removeItem(at: configuration.url)
+            do {
+                return try ModelContainer(for: schema, configurations: [configuration])
+            } catch {
+                fatalError("Could not create ModelContainer: \(error)")
+            }
         }
     }()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(photos)
+                .preferredColorScheme(nil)
         }
         .modelContainer(sharedModelContainer)
     }

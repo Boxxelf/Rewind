@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C86525BD303230D000FF2844 /* RewindWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C86525B0303230D000FF2844 /* RewindWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C865258F303230D000FF2844 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +25,59 @@
 			remoteGlobalIDString = C865257E303230CD00FF2844;
 			remoteInfo = Rewind;
 		};
+		C86525BB303230D000FF2844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8652577303230CD00FF2844 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C86525B5303230D000FF2844;
+			remoteInfo = RewindWidgets;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C86525B9303230D000FF2844 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C86525BD303230D000FF2844 /* RewindWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C865257F303230CD00FF2844 /* Rewind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rewind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C865258E303230D000FF2844 /* RewindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8652598303230D000FF2844 /* RewindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86525B0303230D000FF2844 /* RewindWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RewindWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C86525BE303230D000FF2844 /* Exceptions for "RewindWidgets" folder in "RewindWidgets" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C86525B5303230D000FF2844 /* RewindWidgets */;
+		};
+		C86525C0303230D000FF2844 /* Exceptions for "Rewind" folder in "Rewind" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C865257E303230CD00FF2844 /* Rewind */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C8652581303230CD00FF2844 /* Rewind */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C86525C0303230D000FF2844 /* Exceptions for "Rewind" folder in "Rewind" target */,
+			);
 			path = Rewind;
 			sourceTree = "<group>";
 		};
@@ -43,6 +89,14 @@
 		C865259B303230D000FF2844 /* RewindUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RewindUITests;
+			sourceTree = "<group>";
+		};
+		C86525B1303230D000FF2844 /* RewindWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C86525BE303230D000FF2844 /* Exceptions for "RewindWidgets" folder in "RewindWidgets" target */,
+			);
+			path = RewindWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +123,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C86525B2303230D000FF2844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +139,7 @@
 				C8652581303230CD00FF2844 /* Rewind */,
 				C8652591303230D000FF2844 /* RewindTests */,
 				C865259B303230D000FF2844 /* RewindUITests */,
+				C86525B1303230D000FF2844 /* RewindWidgets */,
 				C8652580303230CD00FF2844 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +150,7 @@
 				C865257F303230CD00FF2844 /* Rewind.app */,
 				C865258E303230D000FF2844 /* RewindTests.xctest */,
 				C8652598303230D000FF2844 /* RewindUITests.xctest */,
+				C86525B0303230D000FF2844 /* RewindWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,10 +165,12 @@
 				C865257B303230CD00FF2844 /* Sources */,
 				C865257C303230CD00FF2844 /* Frameworks */,
 				C865257D303230CD00FF2844 /* Resources */,
+				C86525B9303230D000FF2844 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C86525BA303230D000FF2844 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C8652581303230CD00FF2844 /* Rewind */,
@@ -163,6 +228,28 @@
 			productReference = C8652598303230D000FF2844 /* RewindUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C86525B5303230D000FF2844 /* RewindWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C86525B8303230D000FF2844 /* Build configuration list for PBXNativeTarget "RewindWidgets" */;
+			buildPhases = (
+				C86525B4303230D000FF2844 /* Sources */,
+				C86525B2303230D000FF2844 /* Frameworks */,
+				C86525B3303230D000FF2844 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C86525B1303230D000FF2844 /* RewindWidgets */,
+			);
+			name = RewindWidgets;
+			packageProductDependencies = (
+			);
+			productName = RewindWidgets;
+			productReference = C86525B0303230D000FF2844 /* RewindWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +271,9 @@
 						CreatedOnToolsVersion = 26.4.1;
 						TestTargetID = C865257E303230CD00FF2844;
 					};
+					C86525B5303230D000FF2844 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 				};
 			};
 			buildConfigurationList = C865257A303230CD00FF2844 /* Build configuration list for PBXProject "Rewind" */;
@@ -203,6 +293,7 @@
 				C865257E303230CD00FF2844 /* Rewind */,
 				C865258D303230D000FF2844 /* RewindTests */,
 				C8652597303230D000FF2844 /* RewindUITests */,
+				C86525B5303230D000FF2844 /* RewindWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +314,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8652596303230D000FF2844 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C86525B3303230D000FF2844 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +351,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C86525B4303230D000FF2844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +370,11 @@
 			isa = PBXTargetDependency;
 			target = C865257E303230CD00FF2844 /* Rewind */;
 			targetProxy = C8652599303230D000FF2844 /* PBXContainerItemProxy */;
+		};
+		C86525BA303230D000FF2844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C86525B5303230D000FF2844 /* RewindWidgets */;
+			targetProxy = C86525BB303230D000FF2844 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,16 +505,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rewind/Rewind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 26L3997BUF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rewind/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Rewind needs permission to remove photos you choose to delete. Nothing ever leaves your device.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Rewind shows your photos on this device so you can rediscover them and free up space. Photos never leave your device.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,7 +536,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -427,16 +545,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rewind/Rewind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 26L3997BUF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rewind/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Rewind needs permission to remove photos you choose to delete. Nothing ever leaves your device.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Rewind shows your photos on this device so you can rediscover them and free up space. Photos never leave your device.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +576,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -538,6 +664,64 @@
 			};
 			name = Release;
 		};
+		C86525B6303230D000FF2844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RewindWidgets/RewindWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26L3997BUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RewindWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Rewind;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinajiang.Rewind.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C86525B7303230D000FF2844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RewindWidgets/RewindWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26L3997BUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RewindWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Rewind;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinajiang.Rewind.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +757,15 @@
 			buildConfigurations = (
 				C86525A9303230D000FF2844 /* Debug */,
 				C86525AA303230D000FF2844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C86525B8303230D000FF2844 /* Build configuration list for PBXNativeTarget "RewindWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C86525B6303230D000FF2844 /* Debug */,
+				C86525B7303230D000FF2844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

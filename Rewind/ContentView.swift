@@ -1,61 +1,71 @@
-//
-//  ContentView.swift
-//  Rewind
-//
-//  Created by Tina Jiang on 8/16/26.
-//
-
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Environment(PhotoLibraryService.self) private var photos
+    @Query private var appStates: [AppStateRecord]
+
+    @State private var session: DeckSessionController?
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        Group {
+            if !(appStates.first?.hasCompletedOnboarding ?? false) {
+                OnboardingView(onFinished: finishOnboarding)
+            } else if let session {
+                RootView()
+                    .environment(session)
+            } else {
+                Color.rewindBackground.ignoresSafeArea()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+        }
+        .background(Color.rewindBackground.ignoresSafeArea())
+        .fontDesign(.rounded)
+        .tint(Color.rewindTextPrimary)
+        .task {
+            await prepareSession()
+            if RewindLaunchAction.pendingStartDeck {
+                RewindLaunchAction.pendingStartDeck = false
+                await session?.startDeck(resetSessionCounts: true)
             }
-        } detail: {
-            Text("Select an item")
+        }
+        .onOpenURL { url in
+            guard url.scheme == "rewind" else { return }
+            RewindLaunchAction.pendingStartDeck = true
+            Task {
+                await session?.startDeck(resetSessionCounts: true)
+                RewindLaunchAction.pendingStartDeck = false
+            }
+        }
+        .onChange(of: photos.authorizationStatus) { _, _ in
+            Task { await session?.bootstrap() }
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+    private func prepareSession() async {
+        _ = AppStateRecord.current(in: modelContext)
+        try? modelContext.save()
+        if session == nil {
+            let controller = DeckSessionController(modelContext: modelContext, photos: photos)
+            session = controller
+            await controller.bootstrap()
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+    private func finishOnboarding() {
+        let state = AppStateRecord.current(in: modelContext)
+        state.hasCompletedOnboarding = true
+        try? modelContext.save()
+        Task { await session?.bootstrap() }
     }
 }
 
 #Preview {
+    let container = try! ModelContainer(
+        for: RewindSchema.models,
+        configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+    )
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .environment(PhotoLibraryService())
+        .modelContainer(container)
 }
