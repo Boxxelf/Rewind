@@ -8,6 +8,12 @@ Built for [Reverie Hacks 2026](https://reverie-hacks-2026.devpost.com/) · App D
 
 ![Platform](https://img.shields.io/badge/iOS-26%2B-black) ![Swift](https://img.shields.io/badge/Swift-5-orange) ![SwiftUI](https://img.shields.io/badge/SwiftUI-native-blue) ![Privacy](https://img.shields.io/badge/photos-on--device%20only-lightgrey)
 
+## Product film and brand
+
+[![Rewind — Keep the memories. Make room for more.](Brand/covers/rewind-cover-landscape.png)](https://tinajiang.dev/work/rewind/)
+
+[Watch the 29-second product film](https://tinajiang.dev/work/rewind/) · [Download the video](Marketing/Rewind_29s_1080p60.mp4) · [Brand guidelines and logos](Brand/README.md)
+
 ## Why it exists
 
 Most people never finish cleaning their camera roll. Month-by-month tools feel like chores: chronological, binary, guilt-driven. Rewind is the opposite.

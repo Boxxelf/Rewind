@@ -1,0 +1,10 @@
+{
+  "name": "rewind",
+  "version": "1.0.0",
+  "tagline": "Keep the memories. Make room for more.",
+  "colors": {"cream":"#F6F3ED","ink":"#151716","forest":"#163E32","mint":"#3ECF8E","coral":"#FF6B4A"},
+  "typography": {"display":{"family":"Arial Black","fallback":"Arial, sans-serif","weight":900,"trackingEm":-0.045},"body":{"family":"Arial","fallback":"Helvetica Neue, Helvetica, sans-serif","weight":400,"lineHeight":1.5}},
+  "logo": {"clearSpaceSymbolHeight":0.5,"minimumLockupWidthCssPx":120,"minimumMarkWidthCssPx":24},
+  "motion": {"smooth":[0.65,0,0.2,1],"out":[0.16,1,0.3,1],"masterFps":60,"masterDurationSeconds":29,"musicBpm":120},
+  "gestures": {"right":"Keep","up":"Stage for deletion","left":"Skip","down":"Later"}
+}
