@@ -48,7 +48,7 @@ Keep claims short and readable. Sentence case works for headlines; small upperca
 
 Use real memories with natural color: people, pets, trips, and ordinary moments. Preserve believable skin tones and avoid oversaturated teal/orange grading. In product demonstrations, use genuine app screens. Generated project-cover imagery is campaign artwork and must not serve as evidence of shipped UI.
 
-Use restrained device reflections, soft grounded shadows, rounded photo cards, and open space. Avoid crowded dashboards, extra badges, heavy outlines, and simulated App Store endorsements. The approved cover has landscape and portrait variants; choose the variant that fits the container instead of tightly cropping the landscape wordmark.
+Use restrained device reflections, soft grounded shadows, rounded photo cards, and open space. Avoid crowded dashboards, extra badges, heavy outlines, and simulated App Store endorsements. The current Work-list cover is a 3:4 portrait with a flat forest background and the reverse logo centered with ample clear space. Use `covers/rewind-card-brand.svg` for the web and its PNG for export. It contains no photography or AI-generated imagery. The earlier illustrated landscape/portrait assets remain as archived campaign concepts.
 
 ## Motion
 
