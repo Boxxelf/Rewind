@@ -10,8 +10,6 @@ Built for [Reverie Hacks 2026](https://reverie-hacks-2026.devpost.com/) · App D
 
 ## Product film and brand
 
-[![Rewind — Keep the memories. Make room for more.](Brand/covers/editorial/rewind-landscape.png)](https://tinajiang.dev/work/rewind/)
-
 [Watch the 29-second product film](https://tinajiang.dev/work/rewind/) · [Download the video](Marketing/Rewind_29s_1080p60.mp4) · [Brand guidelines and logos](Brand/README.md)
 
 ## Why it exists

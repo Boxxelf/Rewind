@@ -48,7 +48,7 @@ Keep claims short and readable. Sentence case works for headlines; small upperca
 
 Use real memories with natural color: people, pets, trips, and ordinary moments. Preserve believable skin tones and avoid oversaturated teal/orange grading. In product demonstrations, use genuine app screens. Generated project-cover imagery is campaign artwork and must not serve as evidence of shipped UI.
 
-Use restrained device reflections, soft grounded shadows, rounded photo cards, and open space. Avoid crowded dashboards, extra badges, heavy outlines, and simulated App Store endorsements. The current editorial cover system combines a lightweight forest-green headline, compact heavy logo, and three staggered iPhones on warm ivory. Landscape is 16:9 and portrait is 3:4, separately composed. Device displays reference existing Clean, Explore, and Chapters screenshots; do not introduce unrelated stock imagery. The generated compositions are illustrative, not pixel-exact UI documentation. Keep the mint rewind symbol to the left of the wordmark. Preserve an 8% safe area for portrait headlines. The vector-only forest cover remains an alternate in `covers/rewind-card-brand.svg`.
+Use restrained device reflections, soft grounded shadows, rounded photo cards, and open space. Avoid crowded dashboards, extra badges, heavy outlines, and simulated App Store endorsements. The current project cover is 3:4, with the primary mint-and-ink Rewind logo centered on warm white (#F6F3ED). Use only the logo: no headlines, devices, photography, or decoration. The website has no landscape cover. Use `covers/rewind-card-cream.svg` for crisp scaling; earlier concepts are archived.
 
 ## Motion
 
@@ -69,6 +69,6 @@ Use “ready to free” for pending space. Do not imply a swipe immediately and 
 
 - `brand-tokens.json`: platform-neutral palette, typography and motion values.
 - `brand.css`: scoped CSS variables and utility classes.
-- `covers/`: approved landscape and portrait project artwork.
+- `covers/`: current warm white portrait cover and archived earlier concepts.
 - `COVER_PROMPTS.md`: generation provenance and exact prompts.
 - `../Marketing/`: product film, video script, and asset attribution.
